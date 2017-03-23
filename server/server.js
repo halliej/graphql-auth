@@ -15,7 +15,7 @@ const config = require('./config.json');
 const app = express();
 
 // Replace with your mongoLab URI
-const MONGO_URI = 'mongodb://${config.dbUser}:${config.dbPw}@ds139360.mlab.com:39360/auth';
+const MONGO_URI = `mongodb://${config.dbUser}:${config.dbPw}@ds139360.mlab.com:39360/auth`;
 
 // Mongoose's built in promise library is deprecated, replace it with ES2015 Promise
 mongoose.Promise = global.Promise;
