@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const express = require('express');
 const models = require('./models');
 const expressGraphQL = require('express-graphql');
@@ -59,7 +60,8 @@ app.use('/graphql', expressGraphQL({
 // a single bundle.js output of all of our client side Javascript
 const webpackMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
-const webpackConfig = require('../webpack.config.js');
+const webpackConfig = require('../webpack.config');
+
 app.use(webpackMiddleware(webpack(webpackConfig)));
 
 module.exports = app;
